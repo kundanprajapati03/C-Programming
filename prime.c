@@ -1,26 +1,26 @@
 #include <stdio.h>
 #include <conio.h>
-
-void main()
+int main()
 {
-    int count;
-    for (int i = 1; i < 100; i++)
+    int a, count = 0;
+    printf("Enter a number:- ");
+    scanf("%d", &a);
+
+    for (int i = 2; i < a; i++)
     {
-        for (int j = 2; j < i; j++)
+        if (a%i == 0)
         {
-            if (i % j == 0)
-            {
-                count = 1;
-            }
+            count = 1;
         }
-        if (count == 0)
-        {
-            printf("%d\t", i);
-        }
-        count = 0;
     }
+    if (count == 0)
+        {
+            printf("Prime Number");
+        }
+        else{
+            printf("Not a Prime Number");
+        }
+    
     getch();
+    return 0;
 }
-
-
-
